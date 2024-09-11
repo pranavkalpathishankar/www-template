@@ -1,0 +1,3 @@
+[submodule "themes/www-template"]
+	path = themes/www-template
+	url = https://github.com/llvm/www-template
