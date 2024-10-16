@@ -1,5 +1,141 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://www-new.llvm.org'
 languageCode = 'en-us'
 title = 'The LLVM Compiler Infrastructure'
 
 theme = 'www-template'
+
+[markup.goldmark.renderer] 
+  unsafe= true
+
+
+# Navigation Bar Menu
+[[menus.main]]
+name = 'Getting Started'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Docs'
+pageRef = '/docs'
+weight = 20
+
+[[menus.main]]
+name = 'Blogs'
+pageRef = '/blogs'
+weight = 30
+
+[[menus.main]]
+name = 'Resources'
+pageRef = '/resources'
+weight = 40
+
+  [[menus.main]]
+  name = 'Doxygen '
+  pageRef = '/'
+  weight = 1
+  parent = 'Resources'
+
+  [[menus.main]]
+  name = 'GitHub'
+  pageRef = '/'
+  weight = 2
+  parent = 'Resources'
+
+  [[menus.main]]
+  name = 'Code Review'
+  pageRef = '/'
+  weight = 3
+  parent = 'Resources'
+
+[[menus.main]]
+name = 'Downloads'
+pageRef = '/downloads'
+weight = 50
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+
+
+# Hero section links
+
+[params]
+  logo = "images/logo.png"
+  navbar_logo = "images/logo.png"
+  subtitle = 'The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Despite its name, LLVM has little to do with traditional virtual machines. The name "LLVM" itself is not an acronym; it is the full name of the project.  '
+  no_robots = true
+
+  [[params.hero_section_buttons]]
+    title = "Get Started"
+    url = "/get-started"
+    type = "primary"
+  [[params.hero_section_buttons]]
+    title = "Releases"
+    url = "https://releases.llvm.org"
+    type = "secondary"
+
+  # only first 4 links will be displayed
+  [[params.hero_section_links]]
+    title = "Latest Release"
+    icon = "ri-hashtag"
+    url = "/"
+  [[params.hero_section_links]]
+    title = "Upcoming Events"
+    icon = "ri-play-large-line"
+    url = "#upcoming_events"
+  [[params.hero_section_links]]
+    title = "Read the Docs"
+    icon = "ri-book-open-line"
+    url = "/"
+  [[params.hero_section_links]]
+    title = "Explore subprojects"
+    icon = "ri-projector-line"
+    url = "/"
+
+# Table of contents config
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
+# Footer config
+
+[params.footer]
+title = "The LLVM Compiler Infrastructure"
+
+[[params.footer.columns]]
+title = "LLVM"
+links = [
+  { text = "Features", url = "#" },
+  { text = "Documentation", url = "#" },
+  { text = "Blog", url = "#" },
+  { text = "FAQ", url = "#" },
+  { text = "Resources", url = "#" },
+  { text = "Download", url = "#" }
+]
+
+[[params.footer.columns]]
+title = "Dev. Resources"
+links = [
+  { text = "Doxygen", url = "#" },
+  { text = "Sources (GitHub)", url = "#" },
+  { text = "Code Review", url = "#" },
+  { text = "Bug Tracker", url = "#" },
+  { text = "Green Dragon", url = "#" },
+  { text = "LNT", url = "#" },
+  { text = "Scan Build", url = "#" },
+  { text = "llvm-cov", url = "#" },
+  { text = "Compile-time tracker", url = "#" }
+]
+
+[[params.footer.columns]]
+title = "About LLVM"
+links = [
+  { text = "Mission", url = "#" },
+  { text = "Community", url = "#" },
+  { text = "Events", url = "#" },
+  { text = "Sponsors", url = "#" },
+  { text = "Contact", url = "#" }
+]
