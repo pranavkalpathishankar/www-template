@@ -11,45 +11,44 @@ theme = 'www-template'
 # Navigation Bar Menu
 [[menus.main]]
 name = 'Getting Started'
-pageRef = '/'
+url = 'https://llvm.org/docs/GettingStarted.html'
 weight = 10
 
 [[menus.main]]
+name = 'Features'
+url = 'features'
+weight = 15
+
+[[menus.main]]
 name = 'Docs'
-pageRef = '/docs'
+url = 'https://llvm.org/docs/'
 weight = 20
 
 [[menus.main]]
 name = 'Blogs'
-pageRef = '/blogs'
+url = 'https://blog.llvm.org/'
 weight = 30
 
 [[menus.main]]
 name = 'Resources'
-pageRef = '/resources'
+url = '/resources'
 weight = 40
 
   [[menus.main]]
   name = 'Doxygen '
-  pageRef = '/'
+  url = 'https://llvm.org/doxygen/'
   weight = 1
   parent = 'Resources'
 
   [[menus.main]]
   name = 'GitHub'
-  pageRef = '/'
+  url = 'https://github.com/llvm/llvm-project/'
   weight = 2
-  parent = 'Resources'
-
-  [[menus.main]]
-  name = 'Code Review'
-  pageRef = '/'
-  weight = 3
   parent = 'Resources'
 
 [[menus.main]]
 name = 'Downloads'
-pageRef = '/downloads'
+url = 'https://releases.llvm.org'
 weight = 50
 
 [module]
@@ -74,7 +73,7 @@ weight = 50
 
   [[params.hero_section_buttons]]
     title = "Get Started"
-    url = "/get-started"
+    url = "https://llvm.org/docs/GettingStarted.html"
     type = "primary"
   [[params.hero_section_buttons]]
     title = "Releases"
@@ -85,7 +84,7 @@ weight = 50
   [[params.hero_section_links]]
     title = "Latest Release"
     icon = "ri-hashtag"
-    url = "/"
+    url = "https://releases.llvm.org"
   [[params.hero_section_links]]
     title = "Upcoming Events"
     icon = "ri-play-large-line"
@@ -93,11 +92,11 @@ weight = 50
   [[params.hero_section_links]]
     title = "Read the Docs"
     icon = "ri-book-open-line"
-    url = "/"
+    url = "https://llvm.org/docs/"
   [[params.hero_section_links]]
     title = "Explore subprojects"
     icon = "ri-projector-line"
-    url = "/"
+    url = "#subprojects"
 
 # Table of contents config
 
@@ -114,34 +113,33 @@ title = "The LLVM Compiler Infrastructure"
 [[params.footer.columns]]
 title = "LLVM"
 links = [
-  { text = "Features", url = "#" },
-  { text = "Documentation", url = "#" },
-  { text = "Blog", url = "#" },
-  { text = "FAQ", url = "#" },
-  { text = "Resources", url = "#" },
-  { text = "Download", url = "#" }
+  { text = "Features", url = "/features" },
+  { text = "Documentation", url = "https://llvm.org/docs" },
+  { text = "Blog", url = "https://blog.llvm.org" },
+  { text = "FAQ", url = "https://llvm.org/docs/FAQ.html" },
+  { text = "Download", url = "https://releases.llvm.org/" }
 ]
 
 [[params.footer.columns]]
 title = "Dev. Resources"
 links = [
-  { text = "Doxygen", url = "#" },
-  { text = "Sources (GitHub)", url = "#" },
-  { text = "Code Review", url = "#" },
-  { text = "Bug Tracker", url = "#" },
-  { text = "Green Dragon", url = "#" },
-  { text = "LNT", url = "#" },
-  { text = "Scan Build", url = "#" },
-  { text = "llvm-cov", url = "#" },
-  { text = "Compile-time tracker", url = "#" }
+  { text = "Doxygen", url = "https://llvm.org/doxygen/" },
+  { text = "Sources (GitHub)", url = "https://github.com/llvm/llvm-project/" },
+  { text = "Bug Tracker", url = "https://github.com/llvm/llvm-project/issues/" },
+  { text = "Buildbot", url = "https://lab.llvm.org/buildbot/" },
+  { text = "Green Dragon", url = "http://green.lab.llvm.org/" },
+  { text = "LNT", url = "http://lnt.llvm.org/" },
+  { text = "Scan Build", url = "https://llvm.org/reports/scan-build/" },
+  { text = "Compile-time tracker", url = "https://llvm-compile-time-tracker.com/" }
 ]
 
 [[params.footer.columns]]
 title = "About LLVM"
 links = [
-  { text = "Mission", url = "#" },
-  { text = "Community", url = "#" },
-  { text = "Events", url = "#" },
-  { text = "Sponsors", url = "#" },
-  { text = "Contact", url = "#" }
+  { text = "LLVM Foundation", url = "https://foundation.llvm.org/" },
+  { text = "LLVM Discourse Forum", url = "https://discourse.llvm.org/" },
+  { text = "Mailing Lists", url = "https://lists.llvm.org/cgi-bin/mailman/listinfo" },
+  { text = "Discord", url = "https://discord.gg/xS7Z362" },
+  { text = "IRC Channel irc.oftc.net #llvm", url = "https://llvm.org/docs/GettingInvolved.html#irc" },
+  { text = "LLVM Community Calendar", url = "https://calendar.google.com/calendar/u/0/embed?src=calendar@llvm.org" },
 ]
