@@ -94,9 +94,9 @@ weight = 50
     icon = "ri-book-open-line"
     url = "https://llvm.org/docs/"
   [[params.hero_section_links]]
-    title = "Explore subprojects"
+    title = "LLVM Projects"
     icon = "ri-projector-line"
-    url = "#subprojects"
+    url = "/projects-with-llvm"
 
 # Table of contents config
 
