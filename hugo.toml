@@ -66,10 +66,14 @@ weight = 50
   no_robots = true
 
   [params.banner]
-  visible = true
-  description = "Feedback for this website"
-  button_text = "Feedback Form"
-  url = "https://docs.google.com/forms/d/1irmZ1vSHtYUqTFQIUqBxl2rjbW4mpaRdzrpBxsqxrsE/"
+    visible = true
+    description = "Feedback for this website"
+    [[params.banner.buttons]]
+      text = "Feedback Form"
+      url = "https://docs.google.com/forms/d/1irmZ1vSHtYUqTFQIUqBxl2rjbW4mpaRdzrpBxsqxrsE/"
+    [[params.banner.buttons]]
+      text = "Old Website"
+      url = "https://llvm.org"
 
   [[params.hero_section_buttons]]
     title = "Get Started"
