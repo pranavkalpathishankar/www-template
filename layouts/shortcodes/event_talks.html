@@ -10,7 +10,12 @@
 
 {{- range $dataList -}}
   <p class="data-item">
-    <h4 style="margin-bottom: 0.25rem;">{{ .title }}</h4>
+
+    {{/*  for adding ids to headers  */}}
+    {{- $content := .title | plainify -}}
+    {{- $id := anchorize $content -}}
+    <h4 id="{{ $id }}" style="margin-bottom: 0.25rem;">{{ .title }}</h4>
+
     <span><em>{{ .speaker }}</em> 
       {{ if .slides_url }}
         [<a href="{{ .slides_url }}" target="_blank">Slides</a>]
