@@ -1,0 +1,105 @@
+quick_talks:
+  - title: "Implementing MIR Pattern Matching & Rewriting for GlobalISel Combiners"
+    speaker: "Pierre van Houtryve"
+    video_url: "https://youtu.be/gQDBrN2uPMk"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Houtryve-MIRPatternsForGlobalISelCombiners.pdf"
+    description: |
+      GlobalISel combiners relied on ad-hoc C++ code for combiner rules despite using TableGen. Pierre worked on adding MIR patterns with PatFrag-like systems and type inference to the GlobalISel combiners, enabling combiner rules to be written directly in TableGen.
+
+  - title: "Enhancing clang-linker-wrapper to support SYCL/DPC++"
+    speaker: "Alexey Sachkov"
+    video_url: "https://youtu.be/uhNHlytKX4c"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Sachkov-EnchancingClang-linker-wrapper-to-supportSYCL.pdf"
+    description: |
+      Alexey Sachkov discusses changes Intel made to the clang-linker-wrapper to support SYCL device code linking and wrapping. The talk highlights device code handling, metadata propagation, and other features introduced to the tool.
+
+  - title: "Parallelizing applications with indirect memory writes in MLIR"
+    speaker: "Pablo Antonio Martinez, Hugo Trachino"
+    video_url: "https://youtu.be/mGSu5zdYHpg"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Martinez-ParallelizingApplicationsWithMLIR.pdf"
+    description: |
+      This work introduces a method to automatically parallelize loops with indirect memory writes in MLIR. The approach shows up to 4.9x speedup across benchmarks and addresses the challenge of data races in AI and HPC applications.
+
+  - title: "Arcilator for ages five and up: flexible self-contained hardware simulation made easy"
+    speaker: "Théo Degioanni"
+    video_url: "https://youtu.be/lE7ynoMstQA"
+    slides_url: "Degioanni-Arcilator.pdf"
+    description: |
+      Théo Degioanni introduces Arcilator, a simulator for hardware modeled in CIRCT dialects. This talk explains the new dialect-based interface for Arcilator, eliminating the need for heavy C++ wrappers, and showcases its use cases.
+
+  - title: "3 years of experience with the LLVM security group -- successes and remaining challenges"
+    speaker: "Kristof Beyls"
+    video_url: "https://youtu.be/vbBOumh8iSo"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Belys-LLVMSecurityGroup-3YearExperiences.pdf"
+    description: |
+      Kristof Beyls presents a summary of the LLVM security group's achievements over the past three years, discussing successes and remaining challenges, such as threat modeling and supply chain attacks, while also proposing areas of improvement.
+
+  - title: "LLDB: What's in a Register?"
+    speaker: "David Spickett"
+    video_url: "https://youtu.be/Hb7DbdIr3Rk"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Spickett-lldb-Whats-in-a-register.pdf"
+    description: |
+      David Spickett introduces a new feature in LLDB 18 that leverages Clang's Abstract Syntax Tree to disassemble register contents and help developers avoid manually interpreting register values, simplifying debugging tasks.
+
+  - title: "Practical fuzzing for C/C++ compilers"
+    speaker: "Oliver Stannard"
+    video_url: "https://youtu.be/3ewJPWW2A00"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Stannard-PracticalFuzzing.pdf"
+    description: |
+      Oliver Stannard shares an overview of fuzzing techniques used to test Clang and GCC compilers. He covers open-source fuzzers like csmith and custom code generators, along with techniques to generate useful bug reports from fuzzer failures.
+
+  - title: "Repurposing LLVM analyses in MLIR: Also there and back again across the tower of IRs"
+    speaker: "Henrich Lauko"
+    video_url: "https://youtu.be/pfViYCignjY"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Lauko-RepurposingLLVMAnalysesInMLIR.pdf"
+    description: |
+      Henrich Lauko explains how legacy LLVM analyses can be reused in MLIR using the concept of a "tower of IRs." This allows analysis outcomes from LLVM IR to be seamlessly applied to MLIR dialects, streamlining the integration process.
+
+  - title: "Life with Opaque Pointers from a Frontend Perspective"
+    speaker: "Sebastian Neubauer"
+    video_url: "https://youtu.be/lEf4xVrtaxU"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Neubauer-LifeWithOpaquePointers.pdf"
+    description: |
+      Sebastian Neubauer discusses challenges frontends face due to the opaque pointer transition, sharing experience moving SPIR-V and DXIL frontends to opaque pointers. The talk also highlights solution patterns to ease the transition.
+
+  - title: "Debug information for macros"
+    speaker: "Adrian Prantl"
+    video_url: "https://youtu.be/WOkoAHTbsbM"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Prantl-DebugInfoForMacros.pdf"
+    description: |
+      Adrian Prantl explains how Swift and C preprocessor macros are represented in debug information and showcases how Swift’s macro expansions are handled in LLDB and other debuggers using LLVM DWARF extensions.
+
+  - title: "From C++ ranges to shorter template names: A C++ Debugging journey"
+    speaker: "Michael Buch"
+    video_url: "https://youtu.be/VT6-fL2hiN8"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Buch-FromSTDRanges.pdf"
+    description: |
+      Michael Buch outlines the recent improvements made to LLDB's expression evaluator to better support C++ debugging, including the addition of default template arguments and Clang's preferred_name attribute for enhanced variable view presentation.
+
+  - title: "Target-aware vectorization for irregular loops or instruction patterns"
+    speaker: "Wei Wei, Mindong Chen"
+    video_url: "https://youtu.be/zoff-riWPP8"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Wei-TargetAwareVectorization.pdf"
+    description: |
+      Wei Wei and Mindong Chen introduce a target-aware vectorization approach for irregular loops and instruction patterns, focusing on generating irregular vector instructions and discussing trade-offs in implementation strategies.
+
+  - title: "Mitigating lifetime issues for C++20 coroutines"
+    speaker: "Utkarsh Saxena"
+    video_url: "https://youtu.be/SEFaC0wkaVE"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Saxena-MitigatingLifetimeIssues.pdf"
+    description: |
+      Utkarsh Saxena explores lifetime issues in C++20 coroutines, particularly those related to reference parameters, and introduces the `[[clang::coro_lifetimebound]]` attribute to extend lifetime bound analysis and improve coroutine code safety.
+
+  - title: "Loop Iteration Space Splitting"
+    speaker: "Ashutosh Nema"
+    video_url: "https://youtu.be/iEs4icJcGrI"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Nema-LoopIterationSpaceSplitting.pdf"
+    description: |
+      Ashutosh Nema presents loop iteration space splitting as a framework to enable various optimizations, discussing the scenarios where loop splitting facilitates performance improvements beyond the elimination of induction range checks, there are additional scenarios where employing loop splitting could facilitate further optimizations.
+
+  - title: "A Wishlist for Faster LLVM Back-ends"
+    speaker: "Alexis Engelke "
+    video_url: "https://youtu.be/i0T_9wTvrbk"
+    slides_url: "/devmtg/2024-04/slides/QuickTalks/Engelke-AWishList-ForFasterLLVM-Backends.pdf"
+    description: |
+      LLVM's back-end is often associated with high performance but long compilation times, even for unoptimized builds. This talk shows where compile-time within the LLVM back-end is spent and outlines some ideas for future improvements.

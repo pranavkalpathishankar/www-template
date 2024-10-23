@@ -1,0 +1,25 @@
+{{- $dataFile := index .Params 0 -}}
+{{- $dataList := index .Params 1 -}}
+
+{{- $dataFilePath := split $dataFile "/" -}}
+{{- $data := site.Data -}}
+{{- range $dataFilePath -}}
+  {{- $data = index $data . -}}
+{{- end -}}
+{{- $dataList := index $data $dataList -}}
+
+{{- range $dataList -}}
+  <p class="data-item">
+    <h4 style="margin-bottom: 0.25rem;">{{ .title }}</h4>
+    <span><em>{{ .speaker }}</em> 
+      {{ if .slides_url }}
+        [<a href="{{ .slides_url }}" target="_blank">Slides</a>]
+      {{ end }}
+      {{ if .video_url }}
+        [<a href="{{ .video_url | relURL }}" target="_blank">Video</a>]
+      {{ end }}
+    </span>
+    <br>
+    <span>{{ .description }}</span>
+  </p>
+{{- end -}}

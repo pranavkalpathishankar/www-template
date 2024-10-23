@@ -1,0 +1,14 @@
+panels:
+  - title: "Carbon: An experiment in different tradeoffs"
+    speaker: "Chandler Carruth, Jon Ross-Perkins, Richard Smith "
+    video_url: "https://youtu.be/Za_KWj5RMR8"
+    slides_url: ""
+    description: |
+      This panel is an opportunity to ask the team working on Carbon about any
+      and all of the tradeoffs and experiments that they're undertaking, how the
+      project and experiment are progressing, and more. A group of active
+      members of the Carbon project will share what we've learned so far,
+      including both things we're excited about and would recommend LLVM and
+      other projects to look at, as well as things that haven't gone so well.
+      We'll also be able to talk about what we have left to do, how we plan to
+      approach it, and places where we likely need help.

@@ -1,0 +1,42 @@
+posters:
+  - title: "Developing an LLVM Backend for VLIW RISC-V Vector Extension Architectures"
+    speaker: "Hao-Chun Chang"
+    poster_url: "/devmtg/2024-04/slides/Posters/Chang-VLIW-RISC-V-VectorExt-Poster.pdf"
+    description: |
+      An experimental VLIW RISC-V target with Vector extension is presented. The poster summarizes the LLVM compiler implementation process for the target, with Swing Modulo Scheduling enabled to enhance performance. LMUL issues are discussed, along with the approach to handle them, and experimental performance results are shown.
+
+  - title: "Hybrid Execution: Combining Ahead-of-Time and Just-in-Time Compilation of LLVM Bitcode"
+    speaker: "Christoph Pichler"
+    poster_url: "/devmtg/2024-04/slides/Posters/Pichler-Poster-CombiningExecutionModes-of-LLVMBitCodeOn-GraalVM.pdf"
+    description: |
+      This poster presents an approach combining Ahead-of-Time (AOT) and Just-in-Time (JIT) compilation for LLVM bitcode using GraalVM. The goal is to improve warm-up performance by identifying suitable code for native execution, avoiding JIT overhead.
+
+  - title: "Dynamic Evolution of Instruction Set Simulators: A Practical Approach with 'ALPACA'"
+    speaker: "Nicholas Fry"
+    poster_url: "/devmtg/2024-04/slides/Posters/Fry-Poster-GeneratingInstructionSetSimulatorsFromHardwareDescription-WithCIRCTMLIR.pdf"
+    description: |
+      ALPACA is a CIRCT MLIR approach to generating Instruction Set Simulators (ISS) from RTL/HLS descriptions of accelerator architectures. This poster covers automatic generation of state update functions and how the ISS dynamically evolves with hardware implementations.
+
+  - title: "PoTATo: Points-to Analysis via Domain-Specific MLIR Dialect"
+    speaker: "Robert Konicar"
+    poster_url: "/devmtg/2024-04/slides/Posters/Konicar-Lauko-PotatoPoster.pdf"
+    description: |
+      PoTATo is a unifying framework designed for points-to analysis through a domain-specific MLIR dialect. It simplifies memory effects representation and optimizes the analysis process using general MLIR tooling.
+
+  - title: "VAST: MLIR Compiler for C/C++"
+    speaker: "Henrich Lauko"
+    poster_url: "/devmtg/2024-04/slides/Posters/Lauko-Poster-VAST.pdf"
+    description: |
+      VAST is an MLIR-based compiler designed for program analysis of C/C++. This poster introduces its architecture and the stack of intermediate representations (IRs), focusing on its applications in static analysis, language transpilation, and decompilation.
+
+  - title: "IR Around the World: Statistical Analysis of a Massive Multi-Language Corpus of IR"
+    speaker: "Khoi Nguyen, Andrew Kallai"
+    poster_url: "/devmtg/2024-04/slides/Posters/Grossman-IRAroundTheWorld.pdf"
+    description: |
+      This poster presents statistical analyses of the generated IR and optimization pipelines across multiple languages. The results aim to inform further investigations into pass pipeline optimization and compile-time performance.
+
+  - title: "Solving Phase Ordering with Off-Policy Deep Reinforcement Learning Algorithms"
+    speaker: "Oliver Chang"
+    poster_url: "/devmtg/2024-04/slides/Posters/Chang-Poster-SolvingPhaseOrdering-WithOffPolicyDeepReinforcement.pdf"
+    description: |
+      This work addresses the phase ordering problem in LLVM compilers using off-policy deep reinforcement learning (DRL). The use of Double Deep Q-learning within the Compiler Gym framework is demonstrated to reduce IR instruction count while using a lightweight neural network and memory buffer.

@@ -46,6 +46,12 @@ weight = 40
   weight = 2
   parent = 'Resources'
 
+  [[menus.main]]
+  name = 'GSoC Projects'
+  url = '/gsoc-projects'
+  weight = 3
+  parent = 'Resources'
+
 [[menus.main]]
 name = 'Downloads'
 url = 'https://releases.llvm.org'

@@ -1,0 +1,262 @@
+technical_talks:
+  - title: "Revamping Sampling-Based PGO with Context-Sensitivity and Pseudo-Instrumentation "
+    speaker: "Wenlei He"
+    video_url: "https://youtu.be/HYJne9WjSd0"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/He-Yu-Wang-Oh-RevampingSamplingBasedPGO.pdf"
+    description: |
+      This talk describes CSSPGO, a context-sensitive sampling-based PGO
+      framework with pseudo-instrumentation. It leverages pseudo instrumentation
+      to improve profile quality without incurring the overhead of traditional
+      instrumentation. It also enriches profile with context-sensitivity to aid
+      more effective optimizations through a novel profiling methodology using
+      synchronized LBR and stack sampling. We will also share how CSSPGO is used
+      to lift performance of Meta's server workloads.
+
+  - title: "Deep Dive on MLIR Interfaces"
+    speaker: "Mehdi Amini"
+    video_url: "https://youtu.be/VCJAmOFvnh4"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Amini-DeepDiveOnMLIRInternals.pdf"
+    description: |
+      This talk will walk through the details of implementation of interfaces in
+      MLIR. The interfaces (OpInterfaces, DialectInterfaces, TypeInterfaces, and
+      AttributeInterfaces) are key components of MLIR extensibility. They are
+      composed of a convenient user API through ODS (TableGen) as well as C++
+      wrappers. However, there are many layers of indirection underlying their
+      implementation, which are quite difficult to grasp with. It is a common
+      complaint that it is impossible to debug or trace the code and understand
+      how everything is fitting together.
+  
+  - title: "Temporal Profiling and Orderfile Optimization for Mobile Apps"
+    speaker: "Ellis Hoag"
+    video_url: "https://youtu.be/yd4pbSTjwuA"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Hoag-TemporalProfiling-and-OrderfileOptimization-forMobileApps.pdf"
+    description: |
+      Traditional PGO can improve CPU-bound applications, but it doesn't work
+      well for some mobile applications which are more concerned with startup
+      time and binary size. We recently extended LLVM's IRPGO framework to
+      support Temporal Profiling to measure an app's startup behavior. We've
+      also created a new algorithm to generate orderfiles called Balanced
+      Partitioning which uses temporal profiles to reduce .text section page
+      faults during startup and can even reduce compressed binary size. And
+      finally, we have a tool to measure an iOS app's page faults on a device to
+      showcase our results. This talk will be useful to anyone interested in
+      understanding how IRPGO can order functions to improve start performance
+      and compressed size.
+
+  - title: "Enable Hardware PGO for both Windows and Linux"
+    speaker: "Wei Xiao"
+    video_url: "https://youtu.be/l-pauXcCz5k"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Xiao-EnablingHW-BasedPGO.pdf"
+    description: |
+      In this talk, we will discuss how to enable hardware PGO by extending
+      sampling-based PGO with enriched profiles. We will postmortem some real
+      cases to demonstrate hardware PGO can expose more optimization
+      opportunities than instrumentation-based PGO and thus provide better
+      performance. Moreover, we will discuss how to enable hardware PGO on
+      Windows based on the latest Intel VTune SEP.
+  
+  - title: "Swift/C++ Interoperability"
+    speaker: "Egor Zhdan"
+    video_url: "https://youtu.be/2g-fQd_OYUU"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Zhdan-SwiftCPlusPus-Interoperability.pdf"
+    description: |
+      Swift/C++ interoperability enables incrementally incorporating Swift - a
+      memory-safe language - into existing C++ codebases and has been used to
+      gradually adopt Swift in large C++ projects, including the Swift compiler
+      itself.
+
+  - title: "Leveraging LLVM Optimizations to Speed up Constraint Solving"
+    speaker: "Benjamin Mikek"
+    video_url: "https://youtu.be/MHnScvWl67U"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Mikek-LeveragingLLVMOptimizations-toSpeedUp-ConstraintSolving.pdf"
+    description: |
+      SLOT is a new tool which uses existing LLVM optimization passes to speed
+      up SMT constraint solvers like Z3. Our strategy is to translate SMT
+      constraints into LLVM IR, apply the optimizer, and then translate back. We
+      find that SLOT speeds up average solving times by up to 2x for
+      floating-point and bitvector constraints, and increases the number of
+      constraints solved at fixed timeouts by up to 80%.
+
+  - title: "Structured Code Generation From the Ground Up"
+    speaker: "Alex Zinenko"
+    video_url: "https://youtu.be/E1QWiJUvw7I"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Zinenko-Vasilache-StructuredCodeGeneration.pdf"
+    description: |
+      Native high-level code generation support in MLIR is largely based on
+      structured code generation. This talk demystifies structured code
+      generation in MLIR by introducing relevant concepts bottom-up from
+      individual arithmetic operations on scalars, to SIMD operations on
+      vectors, to manipulations on multi-dimensional tensors. Examples and
+      illustrations show that this approach boils down to concepts present in
+      modern hardware, though with slightly different terminology.
+
+  - title: "Contextual Instrumented-Based Profiling for Datacenter Applications"
+    speaker: "Mircea Trofin"
+    video_url: "https://youtu.be/jwkcmS52btI"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Trofin-ContextualInstrumented-Based%20ProfilingforDatacenter.pdf"
+    description: |
+      We present an Instrumentation-Based Profile Guided Optimization (PGO)
+      technique that produces contextual profiles. This technique proves
+      competitive with tip-of-tree instrumented PGO in binary size, runtime,
+      memory overhead, and profile size when applied to a real production
+      binary. We conclude with challenges and approaches to incorporating
+      contextual profiles into LLVM.
+
+  - title: "C++ Modules: Build 'Em All with CMake and Clang"
+    speaker: "Alexy Pellegrini"
+    video_url: "https://youtu.be/9OwQZ-LRb0c"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Pellegrini-BuildEmAll-WithCMake.pdf"
+    description: |
+      CMake now supports building C++ modules with Clang. This talk will cover
+      what C++ modules are, how to build and integrate them in your projects,
+      and the main challenges and limitations encountered.
+
+  - title: "Mojo debugging: extending MLIR and LLDB"
+    speakers: "Walter Erquinigo, Billy Zhu"
+    video_url: "https://youtu.be/9jfukpjCPIg"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/MojoDebugging.pdf"
+    description: |
+      Modular has made strides in bringing debugging support for Mojo in LLDB.
+      This talk covers the challenges faced in extending MLIR and LLDB for
+      proper language debugging using DWARF, as well as Modular's open-source
+      contributions. We will explore the approach to creating a user-centric
+      debugging experience, focusing on VS Code.
+
+  - title: "Faster Compilation with GlobalISel: Skipping LLVM-IR"
+    speaker: "Tobias Stadler"
+    video_url: "https://youtu.be/UYPBVel_OLg"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Stadler-FasterCompilation-With-GlobalISel.pdf"
+    description: |
+      In a GlobalISel-based backend, LLVM-IR is translated to generic Machine IR
+      (gMIR), which is then selected into target instructions. This talk covers
+      emitting gMIR directly, skipping the LLVM-IR generation and improving
+      compile-times by ~20%. The presentation will explore working with gMIR,
+      how common IR constructs are lowered for GlobalISel, and discuss LLVM's
+      instruction selectors' performance.
+
+  - title: "Experiences building a JVM using LLVM ORC JIT"
+    speaker: "Markus Böck"
+    video_url: "https://youtu.be/g9b_G4ao3PY"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Bock-Experiences-Building-a-JVM-withLLVMOrc.pdf"
+    description: |
+      JLLVM is a Java virtual machine built with LLVM, featuring a multi-tier
+      system with an interpreter, JIT compiler, relocating garbage collector,
+      and On-Stack replacement. This talk covers the system architecture, ORC
+      JIT, JITLink, and using LLVM for implementing features like garbage
+      collection and deoptimization with On-Stack replacement.
+
+  - title: "Teaching MLIR concepts to undergraduate students"
+    speakers: "Mathieu Fehr, Sasha Lopoukhine"
+    video_url: "https://youtu.be/XnRZA1pz7iw"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Fehr-Lopoukhine-TeachingMLIRConceptsToUndergraduateStudents.pdf"
+    description: |
+      We present a compiler from a simple programming language to RISC-V,
+      implemented entirely in MLIR. This course is used to teach undergraduate
+      students modern compilation concepts and tools at the University of
+      Edinburgh. It guides students through the whole compilation pipeline, from
+      parsing to assembly generation, with all intermediate representations in
+      MLIR IR.
+      
+  - title: "Simplifying, Consolidating & Documenting LLDB's Scripting Functionalities"
+    speaker: "Mohamed Ismail Bennani"
+    video_url: "https://youtu.be/hNvFmZ1iB78"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Bennani-LLDBScriptingImprovements.pdf"
+    description: |
+      This presentation explores current challenges in LLDB's scripting
+      capabilities, emphasizing opportunities for improvement such as enhanced
+      discoverability, updated documentation, and minimized maintenance costs.
+      It delves into advancements in the LLDB Python module, as well as in LLDB
+      Scripted Interface Dispatch method, ensuring a seamless conversion from
+      private types to their scripting counterpart.
+  
+  - title: "Incremental Symbolic Execution for the Clang Static Analyzer"
+    speaker: "Balázs Benics"
+    video_url: "https://youtu.be/bCr2Rw7UpBI"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Benics-IncrementalCSA.pdf"
+    description: |
+      This talk presents a technique to speed up subsequent Clang Static
+      Analyzer (CSA) runs on mostly unchanged code. CSA takes more time to
+      complete than simply compiling the source code, which poses challenges for
+      quick developer feedback. We propose a method to reuse bulk analysis for
+      incremental and localized changes, only re-analyzing changed parts that
+      matter.
+
+  - title: "Accurate Coverage Metrics for Compiler-Generated Debugging Information"
+    speaker: "J. Ryan Stinnett"
+    video_url: "https://youtu.be/LePAdLTRa4Q"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Stinnett-Kell-AccurateCoverageMetrics.pdf"
+    description: |
+      This talk proposes new metrics for measuring coverage of local variables
+      in debugging information produced by compilers, aimed at improving the
+      quality of debugging information for optimized programs. These metrics
+      could encourage language implementations to generate better debugging
+      data.
+
+  - title: "Optimizing RISC-V code size: Zcmt and Zcmi extensions"
+    speaker: "Gábor Márton"
+    video_url: "https://youtu.be/SmMAIyjXowM"
+    description: |
+      This presentation explores how linker relaxations optimize executable
+      binaries on the RISC-V architecture, focusing on reducing code size and
+      enhancing efficiency. We delve into the Zcmt and Zcmi extensions and how
+      they complement broader optimization strategies such as LTO and post-link
+      optimizations.
+
+  - title: "Computing Bounds of SSA Values in MLIR"
+    speaker: "Matthias Springer"
+    video_url: "https://youtu.be/SI3q-aNkrQ4"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Springer-ComputingBoundsOfSSAValues-In-MLIR.pdf"
+    description: |
+      This talk presents the MLIR `ValueBoundsConstraintSet` infrastructure,
+      which computes lower/upper bounds of SSA values or dynamic dimensions in
+      terms of other SSA values. We showcase its use for vectorizing tensor IR
+      and hoisting memory allocations from loops.
+
+  - title: "MLIR Vector Distribution"
+    speakers: "Kunwar Grover, Harsh Menon"
+    video_url: "https://youtu.be/ueYi9NnK4Pw"
+    slides_url: ""
+    description: |
+      We present a vector distribution framework for MLIR, which lowers
+      computation over n-D vector types to target hardware like tensor cores or
+      virtual ISAs. This talk covers experiences from the IREE compiler and
+      discusses moving parts of the work upstream into MLIR.
+
+  - title: "Lifting CFGs to structured control flow in MLIR"
+    speaker: "Markus Böck"
+    video_url: "https://youtu.be/UqO3o4rXJes"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Bock-LiftingCFGs.pdf"
+    description: |
+      This talk explores how MLIR models higher-level control flow operations by
+      lifting control flow graphs (CFGs) to structured control flow. We detail
+      recent upstream implementations and their use cases, covering input
+      constraints and guarantees offered by the algorithm.
+
+  - title: "MLIR Linalg Op Fusion - Theory & Practice"
+    speaker: "Javed Absar"
+    video_url: "https://youtu.be/7-xAzlda0F8"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Absar-MLIR-LinalgOpFusion.pdf"
+    description: |
+      This talk covers essential concepts of the Linalg dialect in MLIR and
+      focuses on Linalg Op Fusion, providing insights into Linalg ops,
+      transformations, and how fusion can optimize performance.
+
+  - title: "Efficient Data-Flow Analysis on Region-Based Control Flow in MLIR"
+    speaker: "Weiwei Chen"
+    video_url: "https://youtu.be/vvVR3FyU9TE"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Chen-Efficient-Data-Flow-Analysis-on-Region-based-Control-Flow-in-MLIR.pdf"
+    description: |
+      This talk presents an efficient Sparse Conditional Constant Propagation
+      (SCCP) algorithm using a structured region-based control flow model for
+      MLIR. This model is applicable for various data-flow analyses, making it
+      easy to debug and efficient.
+
+  - title: "LLVM-IR-Dataset-Utils - Scalable Tooling for IR Datasets"
+    speakers: "Aiden Grossman, Ludger Paehler"
+    video_url: "https://youtu.be/_SOWTuWyx1Q"
+    slides_url: "/devmtg/2024-04/slides/TechnicalTalks/Grossman-LLVMIR-DatasetUtils.pdf"
+    description: |
+      This talk introduces LLVM-IR-Dataset-Utils, a tool that builds LLVM
+      IR-based datasets for developing machine-learned heuristics and validating
+      optimization strategies. We explore its applications for heuristics
+      validation, correctness testing, and compile-time performance tracking.

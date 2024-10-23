@@ -1,0 +1,15 @@
+tutorials:
+  - title: "Zero to Hero: Programming Nvidia Hopper Tensor Core with MLIR's NVGPU Dialect"
+    speaker: "Guray Ozen"
+    video_url: "https://youtu.be/V3Q9IjsgXvA"
+    slides_url: ""
+    description: |
+      NVIDIA Hopper Tensor Core brings groundbreaking performance, requiring the
+      utilization of new hardware features like TMA, Warpgroup level MMA,
+      asynchronous barriers (mbarriers), Thread Block Cluster, and more. Despite
+      having a compiler with these features, crafting a fast GEMM kernel remains
+      challenging. In this talk, we will initially discuss the NVGPU and NVVM
+      dialects, where the Hopper features have been implemented. Following that,
+      we will delve into the implementation of multistage GEMM and
+      warp-specialized GEMM, as used by libraries like Cutlass. Here, we will
+      leverage MLIR's Python bindings to meta-program the IR.

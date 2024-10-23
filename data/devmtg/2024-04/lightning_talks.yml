@@ -1,0 +1,56 @@
+lightning_talks:
+  - title: "The Road to Github Actions: Migrating LLVM’s CI"
+    speaker: "Aiden Grossman"
+    video_url: "https://youtu.be/rqS3kFtCHW8"
+    slides_url: "/devmtg/2024-04/slides/LightningTalks/Grossman-TheRoadToGitHubActions.pdf"
+    description: |
+      This talk covers LLVM’s migration to Github Actions for precommit CI, highlighting challenges, future directions, and community involvement in improving the CI infrastructure.
+
+  - title: "Multilib Configuration Files"
+    speaker: "Peter Smith"
+    video_url: "https://youtu.be/sEP4qlN_sAU"
+    slides_url: "/devmtg/2024-04/slides/LightningTalks/Smith-MultilibConfigurationFiles.pdf"
+    description: |
+      Peter Smith describes the configuration file-based multilib implementation in Clang and shares experience using it in an embedded toolchain.
+
+  - title: "Carbon's high-level semantic IR"
+    speaker: "Richard Smith"
+    video_url: "https://youtu.be/vIWT4RhUcyw"
+    slides_url: "/devmtg/2024-04/slides/LightningTalks/Smith-Carbons-high-level-semanticIR.pdf"
+    description: |
+      Richard Smith introduces Carbon’s Semantics IR, discussing challenges and benefits of using a linear execution-based model for program representation during type-checking.
+
+  - title: "Enabling Loop Vectorization for Compressing Store Pattern"
+    speaker: "Tejas Joshi"
+    video_url: "https://youtu.be/HVQ5mG3lExs"
+    slides_url: "/devmtg/2024-04/slides/LightningTalks/Joshi-EnablingLoopVectorizer-for-CompressingStorePattern.pdf"
+    description: |
+      Tejas Joshi presents LLVM’s newly enabled vectorization for compressing store patterns, showing performance improvements across applications.
+
+  - title: "Automatic Proxy App Generation through Input Capture and Generation"
+    speaker: "Johannes Doerfert, Ivan R. Ivanov"
+    video_url: "https://youtu.be/RUaW1jOQyAo"
+    slides_url: "/devmtg/2024-04/slides/LightningTalks/Ivanov-AutomaticProxyAppGeneration.pdf"
+    description: |
+      Johannes Doerfert and Ivan R. Ivanov introduce a framework for capturing LLVM IR function inputs or generating synthetic input, facilitating relocatable and reproducible benchmark runs.
+
+  - title: "How we use MLIR to test ReRAM cells"
+    speaker: "Maximilian Bartel"
+    video_url: "https://youtu.be/Ym9WQHg9k6U"
+    slides_url: "/devmtg/2024-04/slides/LightningTalks/Bartel-HowWeUseMLIR-To-TestReRAMCells.pdf"
+    description: |
+      Maximilian Bartel explains how the linalg and transform dialects in MLIR, along with the Python execution engine, are used to test ReRAM cells for neuromorphic computing devices.
+
+  - title: "Automatic Retuning of Floating-Point Precision"
+    speaker: "Ivan R. Ivanov, William S. Moses"
+    video_url: "https://youtu.be/QOjgIzEsmzQ"
+    slides_url: ""  # Placeholder as the link for slides wasn't provided
+    description: |
+      This talk presents a new pass in the Enzyme framework to automatically change floating-point precision in applications, optimizing for performance without sacrificing accuracy.
+
+  - title: "OpenSSF Scorecard - Do we need to improve our security practices?"
+    speaker: "Marius Brehler"
+    video_url: "https://youtu.be/X9igMS_CR4o"
+    slides_url: "/devmtg/2024-04/slides/LightningTalks/Brehler-OpenSSFScorecard-Do-we-need-to-improve.pdf"
+    description: |
+      Marius Brehler discusses the OpenSSF Scorecard tool and its integration into the LLVM project, highlighting actions to improve the project’s security score and best practices.

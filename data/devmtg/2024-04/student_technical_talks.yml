@@ -1,0 +1,52 @@
+technical_talks:
+  - title: "Better Performance Models for MLGO Training"
+    speaker: "Viraj Shah"
+    video_url: "https://youtu.be/ZI9ytBkHwKg"
+    slides_url: "/devmtg/2024-04/slides/StudentTechnicalTalks/Shah-BetterPerformanceModelsForMLGOTraining.pdf"
+    description: |
+      This talk presents the development of a performance model capable of
+      accurately modeling longest latency cache misses and including the
+      resulting overhead in throughput and reward signal calculation. The work
+      also explores different ways to balance model accuracy and feasibility in
+      training and usage.
+
+  - title: "Transform-dialect schedules: writing MLIR-lowering pipelines in MLIR"
+    speaker: "Rolf Morel"
+    video_url: "https://youtu.be/YOWAhrh_qxs"
+    slides_url: "/devmtg/2024-04/slides/StudentTechnicalTalks/Morel-Transform-DialectSchedules.pdf"
+    description: |
+      This talk introduces the Transform dialect, which exposes MLIR
+      transformations as ops. It shows how transform operations can be composed
+      into reusable schedules and entire MLIR-lowering pipelines can be
+      declaratively specified using this feature.
+
+  - title: "How expensive is it? Big data for ML cost modeling"
+    speaker: "Aiden Grossman"
+    video_url: "https://youtu.be/T3-clIqsF3s"
+    slides_url: "/devmtg/2024-04/slides/StudentTechnicalTalks/Grossman-MLCostModeling.pdf"
+    description: |
+      This presentation describes tooling and processes to create accurate
+      learned cost models by using a large dataset, ComPile, and benchmarking
+      infrastructure like llvm-exegesis. The approach enables training on a more
+      representative set of basic blocks for improved model accuracy.
+
+  - title: "Sign Extension Optimizations inside LLVM"
+    speaker: "Panagiotis Karouzakis"
+    video_url: "https://youtu.be/HeIDxixC-VM"
+    slides_url: "/devmtg/2024-04/slides/StudentTechnicalTalks/Karouzakis-SignExtOpts.pdf"
+    description: |
+      This talk explores optimizing sign extensions in LLVM IR, particularly for
+      programs running on 64-bit architectures from 32-bit. It discusses how
+      sign extensions can be eliminated by analyzing what upper bits are needed
+      and how dynamic programming optimization can be applied from abstract
+      syntax trees to LLVM IR.
+
+  - title: "High Performance FFT Code Generation through MLIR Linalg Dialect and Micro-kernel"
+    speaker: "Yifei He"
+    video_url: "https://youtu.be/0K93UdgplTo"
+    slides_url: ""
+    description: |
+      This talk covers a compilation framework that can automatically generate
+      high-performance Fast Fourier Transform (FFT) code using MLIR Linalg
+      Dialect and micro-kernels. FFT libraries are a critical component in
+      high-performance computing (HPC) software.

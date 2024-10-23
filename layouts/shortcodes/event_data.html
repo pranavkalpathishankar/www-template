@@ -1,0 +1,21 @@
+{{ $eventid := index .Params 0}}
+{{ $events := .Site.Data.events.events }}
+{{ range $events }}
+    {{ if eq .id $eventid}}
+        <ul>
+            <li>
+                <strong>Conference Dates: </strong> 
+                {{ .start_date | dateFormat "January 2" }}-{{ .end_date | dateFormat "2, 2006" }}
+            </li>
+            <li>
+                <strong>Location: </strong> 
+                {{ .location }}
+            </li>
+            <li>
+                <strong>Event Site: </strong> 
+                <a href="{{ .event_site }}">{{ .event_site }}</a>
+            </li>
+        </ul>
+
+    {{ end }}
+{{ end }}

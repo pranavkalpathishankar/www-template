@@ -1,0 +1,31 @@
+keynote:
+  - title: Does LLVM implement security hardenings correctly? A BOLT-based static analyzer to the rescue?
+    speaker: "Kristof Beyls"
+    video_url: https://youtu.be/Sn_Fxa0tdpY
+    slides_url: /devmtg/2024-04/slides/Keynote/Beyls_EuroLLVM2024_security_hardening_keynote.pdf
+    description: |
+      In the past decade, security has become one of the 3 key areas in compiler
+      design and implementation, next to correctly translating to assembly and
+      optimization. In comparison to general correctness and optimization, we're
+      lacking tools to test correct code generation of security hardening
+      features. This presentation shows the results of an experiment to build a
+      prototype binary static analyzer for 2 security hardening features
+      (pac-ret, stack clash) using BOLT. The results are promising and I propose
+      to integrate this into the upstream BOLT project to enable us to implement
+      higher-quality security mitigations in LLVM and other compilers.
+  - title: How Slow is MLIR 
+    speaker: "Mehdi Amini, Jeff Niu"
+    video_url: https://youtu.be/7qvVMUSxqz4
+    slides_url: /devmtg/2024-04/slides/Keynote/Amini-Niu-HowSlowIsMLIR.pdf
+    description: |
+      This talk will dig into the performance aspects involved in implementing a
+      compiler with MLIR. We're interested here in the compile-time performance
+      (the efficiency of the compiler implementation) instead of the generated
+      code. We will go through implementation details of MLIR and quantify the
+      cost of common operations (traversing or mutating the IR). We will then
+      expose some anti-patterns that we unfortunately commonly see in MLIR-based
+      compilers. Finally we will go through a few elements that are impacting
+      the performance of the IR: for example the threading model of MLIR, how to
+      use resources for zero-overhead management of large constants, taking
+      advantage of the Properties custom storage on operations, or the aspect
+      related to Type/Attribute intrinsic to the storage in the MLIRContext.
