@@ -1,5 +1,5 @@
 ---
-title: 'GSoC Projects'
+title: 'Google Summer of Code Projects'
 description: ""
 toc: true
 tags: []
