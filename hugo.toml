@@ -52,6 +52,12 @@ weight = 40
   weight = 3
   parent = 'Resources'
 
+  [[menus.main]]
+  name = 'Publications'
+  url = '/pubs'
+  weight = 4
+  parent = 'Resources'
+
 [[menus.main]]
 name = 'Downloads'
 url = 'https://releases.llvm.org'
@@ -123,10 +129,14 @@ title = "The LLVM Compiler Infrastructure"
 [[params.footer.columns]]
 title = "LLVM"
 links = [
+  { text = "Getting Started", url = "https://llvm.org/docs/GettingStarted.html" },
   { text = "Features", url = "/features" },
   { text = "Documentation", url = "https://llvm.org/docs" },
   { text = "Blog", url = "https://blog.llvm.org" },
   { text = "FAQ", url = "https://llvm.org/docs/FAQ.html" },
+  { text = "Publications", url = "/pubs" },
+  { text = "Projects with LLVM", url = "/projects-with-llvm" },
+  { text = "GSoC Projects", url = "/gsoc-projects" },
   { text = "Download", url = "https://releases.llvm.org/" }
 ]
 

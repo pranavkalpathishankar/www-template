@@ -1,0 +1,47 @@
+{{ $publications := .Site.Data.pubs.pubs }}
+{{ $currentYear := -1 }}
+
+{{ range $publications }}
+   {{ if ne $currentYear .year }}
+      {{- if ne $currentYear -1 }}
+        </ol> <!-- Close previous list -->
+      {{- end }}
+      <h2 id="{{ .year }}">{{ .year }}</h2>
+      <ol>
+      {{ $currentYear = .year }}
+    {{ end }}
+
+    <p>
+        {{- $titleContent := .title | plainify -}}
+        {{- $id := anchorize $titleContent -}}
+        <h3 id="{{ $id }}" style="margin-bottom: 0.25rem">{{ .title }}</h3>
+
+        {{ .author }}
+
+        {{ if .url }}
+            [<a href="{{ .url }}">Link</a>]
+        {{ else }}
+            [<a href="http://www.google.com/search?q={{ urlquery .title }}">Search</a>]
+        {{ end }}
+
+        <br/>
+
+        {{ if .published }}
+            <i>{{ .published }},</i>
+        {{ end }}
+
+        {{ if .location }}{{ .location }},{{ end }}
+
+        {{ if or .month .year }}
+            {{ if .month }}
+                {{ index (slice "Jan." "Feb." "Mar." "Apr." "May" "June" "July" "Aug." "Sep." "Oct." "Nov." "Dec.") (sub (int .month) 1) }}
+            {{ end }}
+            {{ if .year }} {{ .year }}.{{ end }}
+        {{ end }}
+
+        {{ if .award }}
+            <br><b>{{ .award }}.</b>
+        {{ end }}
+
+    </p>
+{{ end }}
