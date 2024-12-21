@@ -1,0 +1,196 @@
+quick_talks: 
+  - title: "Instrumenting MLIR Based ML Compilers for GPU Performance Analysis and Optimization"
+    speaker: "Corbin Robeck"
+    video_url: "https://youtu.be/raZR06JgeEc"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Robeck-Instrumenting-MLIR-Based-ML-Compilers.pdf"
+    description: |
+        Correlating GPU kernel performance bottleneck analysis information back to program source
+        within modern machine learning frameworks, that use MLIR and JIT style kernels, remains a
+        challenge as it can often be difficult to attribute the performance issue to specific
+        points within the compiler tool chain and the various lowering passes (Python/C++, GPU
+        kernel source, multiple MLIR IRs, LLVM IR, and architecture specific ISA). In this talk we
+        give an overview of a developed set of open source and extendible GPU kernel
+        instrumentation passes to address this issue and how they can be integrated within popular
+        MLIR based machine learning compilers.
+
+
+  - title: "PyDSL: A MLIR DSL for Python developers"
+    speaker: "Kai Ting Wang"
+    video_url: "https://youtu.be/iYLxgTRe8TU"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Wang-PyDSL.pdf"
+    description: |
+      This talk introduces new improvements to PyDSL, a compiler research project that
+      transforms a subset of Python down to MLIR which was originally introduced in an MLIR ODM
+      in December 2023. While the existing MLIR infrastructure is essential to our optimization
+      stack, it does not yet provide a language that can describe MLIR program behaviors that
+      also benefits end-developer productivity. As such, PyDSL aims to bridge this gap by
+      providing a faithful Python-based syntax and programming style to writing MLIR programs.
+      The presentation will review aspects of PyDSL and introduce new ways we manage typing,
+      translate Python syntax into MLIR, and improve the modularity and usability of the
+      language.
+
+
+  - title: "Embedding Domain-Specific Languages in C++ with Polygeist"
+    speaker: "Lorenzo Chelini"
+    video_url: "https://youtu.be/ikI0vUhC_qA"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Chelini-EmbeddingDomain-SpecifcLanguagesWithPolygiest.pdf"
+    description: |
+      Domain-specific languages (DSLs) and compilers allow high-level abstraction and
+      optimal performance by directly mapping abstractions to hardware. DSLs are becoming more
+      prevalent, spanning fields from linear algebra to quantum computing, yet they often remain
+      isolated, complicating multi-domain application optimization and integration with C++
+      codebases. In this talk, we propose embedding DSLs and their optimizations into general-
+      purpose code (C or C++) using Polygeist. Our approach leverages modern compiler technology
+      and facilitates domain-specific compilation, bridging the gap between specialized and
+      general-purpose programming.
+
+  - title: "Vector-DDG (Vector Data Dependence Graph): For Better Visualization and Verification of Vectorized LLVM-IR"
+    speaker: "Sumukh Bharadwaj, Raghesh Aloor"
+    video_url: "https://youtu.be/gDT1dPYZ0Qc"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Bharadwaj-Aloor-Vector-DDG.pdf"
+    description: |
+      We propose Vector-DDG (Vector Data Dependence Graph), a tool to visualize and verify
+      the complicated data flow in vectorized LLVM-IR. The visualization helps to understand the
+      vectorized IR better and to further improve the quality of the same. The automatic
+      verification helps improve the developer productivity by catching the vectorization errors
+      early.
+
+  - title: "From Fallbacks to Performance: Towards Better GlobalISel Performance on AArch64 Advanced SIMD Platforms"
+    speaker: "Madhur Amilkanthwar"
+    video_url: "https://youtu.be/PuuSsAOAf38"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Amilkanthwar-Towards-Better-GlobalISel-Performance-On-AArch64"
+    description: |
+      In this talk, we will present our work on enhancing the Global Instruction Selection
+      (GISel) framework for AArch64 Advanced SIMD platforms. We addressed its fallback to the
+      traditional SelectionDAG due to incomplete support for certain instructions and patterns.
+      We will present our experience with using GISel on TSVC-2, RajaPerf, and LLVM Test Suite
+      benchmarks, which identify fallbacks across GISel due to a lack of support for various SVE
+      instructions and AAPCS ABI. Our contributions include eliminating fallbacks in GISel,
+      particularly for the TSVC-2 benchmark, by introducing patches across the phases of GISel.
+      We also present our work on optimizations of GISel’s generated code which has
+      significantly closed the performance gap between GISel and SelectionDAG on Advanced SIMD-
+      based AArch64 platforms, especially for the TSVC-2 benchmark. These advancements mark an
+      important step forward in improving the GISel framework, bringing us one step closer to
+      making it default. However, we also acknowledge that further effort is required for full
+      SVE support and tuning for other workloads.
+
+  - title: "Extending MLIR Dialects for Deep Learning Compilers"
+    speaker: "Charitha Saumya, Jianhui Li"
+    video_url: "https://youtu.be/amLHnkSD1zc"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Saumya-Li-Extending-MLIR-Dialects-for-DeepLearningCompilers.pdf"
+    description: |
+      This talk discusses the design of XeTile, a dialect developed for expressing and
+      compilation of deep learning kernels. XeTile demonstrates that with a few critical
+      extensions, MLIR dialects can be used as building blocks to support deep learning compiler
+      development for high-performant code generation. With the "Tile" data type and a few
+      operations, XeTile dialect greatly simplifies the lowering of dense operations. Any tile-
+      based GEMM-like algorithms can easily be expressed in a few lines of code, including
+      advanced optimizations like cooperative load/prefetch, K-slicing, and software pipelining.
+
+  - title: "Unlocking High Performance in Mojo through User-Defined Dialects"
+    speaker: "Mathieu Fehr, Jeff Niu"
+    video_url: "https://youtu.be/Lpr_GcX5uKE"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Fehr-Niu-UnlockingHighPerformanceInMojo.pdf"
+    description: |
+      Traditionally, a clear separation exists between language libraries and compiler
+      intermediate representations (IRs): libraries are typically limited to API calls that the
+      compiler cannot reason with, while IRs consist of instructions that only the compiler can
+      analyze and transform. Embedded DSLs typically blur this line, as they often use the host
+      language introspection mechanism, or macro system, to include their own compiler. In this
+      talk, we will present how we merge the concept of libraries and embedded DSLs by providing
+      in Mojo first-class support for extending its MLIR-based compiler.
+
+  - title: "Speeding up Intel Gaudi deep-learning accelerators using an MLIR-based compiler"
+    speaker: "Jayaram Bobba"
+    video_url: "https://youtu.be/IrOibLzfFtE"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Bobba-SpeedingUpIntelGaudi.pdf"
+    description: |
+      Middle-end optimizations play a critical role in generating high-performance code
+      for deep learning accelerators. In this talk, we will present an MLIR-based fusing
+      compiler that generates optimized LLVM IR from high-level graph IR, which is then compiled
+      by an LLVM backend for execution on tensor processing cores in Intel Gaudi deep learning
+      (DL) accelerator. This compiler has been in use for the past three generations of Gaudi
+      products and provides around 54% average performance improvements at a model-level. The
+      talk will cover the lowering pipeline, how we leverage upstream MLIR dialects and some key
+      optimizations and learnings for compiling deep learning workloads to Gaudi.
+
+
+  - title: "Quidditch: An End-to-End Deep Learning Compiler for Occamy using IREE & xDSL"
+    speaker: "Markus Böck, Sasha Lopoukhine"
+    video_url: "https://youtu.be/RSTjn_wA16A"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Bock-Lopoukhine-Quidditch.pdf"
+    description: |
+      We present Quidditch, a neural network compiler and runtime, that provides an end-
+      to-end workflow from a high-level network description to high-performance code running on
+      ETH Occamy, one of the first chiplet-based AI research hardware accelerators. Quidditch
+      builds on IREE, an AI compiler and runtime focused on GPUs, and a micro-kernel compiler
+      for RISC-V-based accelerators in xDSL.
+
+  - title: "Atomic Reduction Operations"
+    speaker: "Gonzalo Brito Gadeschi"
+    video_url: "https://youtu.be/aUwv2vlOZK4"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Brito-Atomic-reductions.pdf"
+    description: |
+      Atomic reductions are atomic read-modify-write operations that do not return a
+      value, enabling them to leverage hardware support in architectures like Arm, X86, and GPUs
+      like PTX. Despite the significant performance improvements they offer, these operations
+      are not currently exposed in LLVM IR. This talk introduces atomic reduction operations,
+      explores their performance benefits, explains why optimizing atomicrmw into atomic
+      reductions is - in general - unsound, and discusses how to provide first-class exposure
+      for them in LLVM IR.
+
+
+  - title: "LLVM Governance Update"
+    speaker: "Chris Bieneman"
+    video_url: "https://youtu.be/dCzd05hCRqs"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Bieneman-LLVM-Project-Governance.pdf"
+    description: |
+      Come hear the latest updates about the LLVM Governance Proposal presented at the
+      2023 US LLVM Developer Meeting. This talk will give a brief overview of the current state
+      of the proposal as well as discussing the next steps as the proposal continues to move
+      forward.
+
+  - title: "Why You Should Use Scudo"
+    speaker: "Chia-Hung Duan, Christopher Ferris"
+    video_url: "https://youtu.be/bRomqthp9Ck"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Duan-Ferris-WhyYouShouldUseScudo"
+    description: |
+      This session will introduce Scudo, a modern memory allocator that provides
+      additional security features. Scudo strikes a balance between allocation speed, memory
+      footprint, and security. We will show how Scudo can help find memory bugs on Android and
+      explain how to build your own Scudo configuration to fit your project's requirement.
+      
+  - title: "Building glibc with LLVM"
+    speaker: "Carlos Seo"
+    video_url: "https://youtu.be/AcA_Dh7srRY"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Seo-Building-glibc-withLLVM.pdf"
+    description: |
+      The GNU C Library (glibc) is a known missing link for any Linux distribution that
+      aims to use clang as the default compiler. This talk walks through the required changes to
+      make it buildable using the LLVM toolchain.
+
+  - title: "RISC-V Support into LLVM’s libc: Challenges and Solutions for 32-bit and 64-bit"
+    speaker: "Mikhail R. Gadelha"
+    video_url: "https://youtu.be/GytmaH64wFo"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Gadelha-RISC-V-SupportIntoLLVM-libc.pdf"
+    description: |
+      This talk covers the integration of RISC-V support into LLVM's libc, focusing on the
+      unique challenges posed by RISC-V's syscall interface, the 32-bit architecture
+      complexities, and testing without hardware. Attendees will gain insights into the process
+      of adding support for new architectures in LLVM's libc.
+
+  - title: "Benchmarking Clang on Windows on Arm: Building and Running SPEC 2017"
+    speaker: "Benchmarking Clang on Windows on Arm: Building and Running SPEC 2017"
+    video_url: "https://youtu.be/MVgDQNzNDB0"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/quicktalks/Javaid-SPEC-2017.pdf"
+    description: |
+      In this session we go through the process of building and running SPEC 2017
+      benchmark suite to evaluate performance of Clang on Windows on Arm platform. We aims to
+      provide a preliminary overview of the current state of Clang performance on Windows,
+      particularly on the Arm platform We will discuss which benchmarks build and run
+      successfully and identify those that fail, providing insights into the strengths and
+      limitations of Clang on the quickly evolving Windows on Arm platform. We will present
+      initial performance numbers, comparing Clang's results with MSVC, and highlighting key
+      differences in their performance across various benchmarks. Additionally, we will briefly
+      touch on how tools like the Windows Perf can improve our understanding of these results,
+      setting the stage for future optimization efforts and deeper analysis.

@@ -1,0 +1,52 @@
+lightning_talks:
+  - title: "Using llvm-libc in LLVM Embedded Toolchain for Arm"
+    speaker: "Peter Smith"
+    video_url: "https://youtu.be/ctgkbaYwT_I"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/lightning/Smith-Using-llvm-libc.pdf"
+    description: |
+      Using llvm-libc in LLVM Embedded Toolchain for Arm Arm have recently added support
+      for LLVM's libc to the LLVM Embedded Toolchain for Arm as an overlay package. This
+      presentation will cover: * How to build the toolchain with llvm-libc libraries. * How to
+      use the llvm-libc libraries with the toolchain. * What works with llvm-libc and what
+      doesn't. * A comparison of llvm-libc with the embedded toolchains' picolibc. The LLVM
+      Embedded Toolchain for Arm is one of the easiest ways to try out llvm-libc for embedded
+      projects. We would like to encourage people to try out llvm-libc to gather feedback for
+      its future development.
+
+  - title: "Hey, do you want a RISC-V debugger? - Enabling RISC-V support in LLDB"
+    speaker: Ted Woodward
+    video_url: "https://youtu.be/YSdeFLdL5DM"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/lightning/Woodward-RISC-V-Debugger.pdf"
+    description: |
+      "Hey, do you want a RISC-V debugger? That question started my odyssey that lead to
+      a working upstream LLDB for RISC-V. This talk will discuss that journey.
+
+  - title: "MD5 Checksums in LLDB"
+    speaker: "Jonas Devlieghere"
+    video_url: "https://youtu.be/JIBhafjL_oo"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/lightning/Devlieghere-MD5-Checksums-In-LLDB.pdf"
+    description: |
+      Support for DWARF MD5 checksums in LLDB.
+
+  - title: "Experiments with two-phase expression evaluation for a better debugging experience"
+    speaker: "Ilya Kuklin"
+    video_url: "https://youtu.be/mYze6ndZuZ8"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/lightning/Kuklin-Experiments-with-two-phase-expression-evaluation.pdf"
+    description: |
+      LLDB can spend a substantial amount of time on evaluating expressions during
+      debugging. This is an issue with debugging large real-world applications. We experimented
+      with the idea of having a limited but fast way of evaluating expressions with the ability
+      to fall back to the current LLDB. For this purpose, we revamped a project called `lldb-
+      eval` and integrated it into LLDB. Our experiments with this approach on large real-world
+      applications showed that most expressions are simple enough and could be evaluated much
+      faster making debugging experience noticeably smoother.
+
+  - title: "Flang Update"
+    speaker: "Steve Scalpone"
+    video_url: "https://youtu.be/xfBANFcMhCo"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/lightning/Scalpone-FlangUpdate.pdf"
+    description: |
+      Flang is an LLVM subproject which is a ground-up implementation of a Fortran front
+      end written in modern C++. Flang uses MLIR as in intermediate language and implements
+      OpenMP for CPUs and GPUs. This lightning talk touches on current development efforts,
+      testing coverage, feature status, and performance.

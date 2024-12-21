@@ -1,0 +1,17 @@
+keynote:
+  - title: Rust ❤️ LLVM
+    speaker: "Nikita Popov"
+    video_url: https://youtu.be/Kqz-umsAnk8  
+    slides_url: https://llvm.org/devmtg/2024-10/slides/keynote/Popov-Rust_Heart_LLVM.pdf 
+    description: |
+      This talk is about how Rust uses LLVM, how the two projects interact, and the challenges
+      and opportunities that arise.
+  - title: State of Clang as a C and C++ Compiler 
+    speaker: "Aaron Ballman"
+    video_url: https://youtu.be/hKY7OLLZw1w 
+    slides_url: https://llvm.org/devmtg/2024-10/slides/keynote/Ballman-StateofClang2024.pdf
+    description: |
+      Come along with Clang's lead maintainer on a whirlwind tour of what new standard C
+      and C++ language features have been added to Clang in the past 1-2 years, an overview of
+      what standards-related work the community is actively implementing for Clang 20 and
+      beyond, and discussion of what challenges the community is facing and could use help with.

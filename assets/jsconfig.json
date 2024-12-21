@@ -3,7 +3,7 @@
   "baseUrl": ".",
   "paths": {
    "*": [
-    "../themes/www-template/assets/*"
+    "..\\themes\\www-template\\assets\\*"
    ]
   }
  }

@@ -1,0 +1,119 @@
+posters: 
+  - title: "Fuzzlang: Generating Compilation Errors to Teach ML Code Fixes"
+    speaker: "Baodi Shan"
+    video_url: "N/A"
+    poster_url: "https://llvm.org/devmtg/2024-10/slides/poster/Shan-Fuzzlang-Poster.pdf"
+    description: |
+      In the realm of code repair, the diversity and accuracy of error datasets are
+      critical for enhancing model performance. Fuzzlang, a newly developed Clang Python
+      wrapper, addresses this need by generating a wide range of compilation errors through
+      modifications to compilation commands or source code. It systematically collects error
+      messages, corresponding correct and erroneous code, and AST information to build a
+      comprehensive dataset. Fuzzlang’s dataset offers significantly greater error diversity
+      than existing resources like Deepfix and C-Pack-IPAs, as measured against the different
+      error kinds in Clang’s diagnostic files. In a small study we applied Fuzzlang on the
+      llvm-project and identified 417 unique compilation errors. We fine-tuned both the
+      Llama3-8b model and the GPT-4o-mini model, and the code correction accuracy for the
+      observed error catergories improved from 37.22% to 93.97% for Llama3-8b and from 72.29% to
+      96.70% for GPT-4o-mini. 
+
+  - title: "The XLG framework: an MLIR replacement for ASTs"
+    speaker: "Fabian Mora-Cordero"
+    video_url: "N/A"
+    poster_url: "N/A"
+    description: |
+      In this talk, we present the XLG framework, a novel intermediate representation
+      capable of replacing ASTs with MLIR. As part of the talk, we will also examine how to
+      perform semantic analysis, code generation, and constant evaluation on XLG. Furthermore,
+      we will demonstrate how these tasks can be performed in an extensible manner, allowing the
+      introduction of new semantics rules or constructs as plugins. Finally, we present how to
+      interoperate XLG with existing dialects and leverage existing MLIR passes to handle often
+      tricky programming notions like meta-programming.
+
+
+  - title: "accfg: Eliminating Setup Overhead for Accelerator Dispatch"
+    speaker: "Anton Lydike, Josse Van Delm"
+    video_url: "N/A"
+    poster_url: "N/A"
+    description: |
+      Modern computing is moving toward heterogeneous architectures with general compute
+      cores and specialized accelerators. However, these accelerators require increasing cycles
+      for configuration, creating a new bottleneck that limits peak performance. Fortunately,
+      modern compiler techniques can address this issue. We introduce a general optimization
+      dialect designed to eliminate setup overhead and demonstrate significant speed-ups on
+      three accelerator platforms.
+
+
+  - title: "MLIR and Pytorch: A Compilation Pipeline targeting Huawei's Ascend Backend"
+    speaker: "Amy Wang"
+    video_url: "N/A"
+    poster_url: "https://llvm.org/devmtg/2024-10/slides/poster/Wang-MLIR-and-PyTorch-Poster.pdf"
+    description: |
+      We present our work on compiling PyTorch code through MLIR to target Ascend AI
+      Processors. The approach starts from PyTorch to Torch-MLIR followed by an MLIR Pipeline,
+      converting down to a custom AscendC Dialect, where C-like AscendC code is produced with
+      enhanced EmitC utilities. This method not only benefits Ascend users but also opens up
+      more optimization opportunities from Ascend back to MLIR. We aim to enhance the MLIR
+      ecosystem by sharing our experiences and we welcome any discussion about potential
+      improvements to our pipeline, to better target AI processors.
+
+
+  - title: "Developing an HLSL intrinsic for the SPIR-V and DirectX backends"
+    speaker: "Farzon Lotfi"
+    video_url: "N/A"
+    poster_url: "N/A"
+    description: |
+      The tutorial will cover the basics of writing an HLSL intrinsic. From frontend to
+      backend development to writing code gen, sema, and backend test cases. Examples included
+      will cover how to handle cases where an intrinsic maps directly to a DXIL or SPIRV op and
+      cases where an intrinsic needs to be replaced with an instruction expansion.
+
+  - title: "New Headergen"
+    speaker: "Rose Zhang, Aaryan Shukla"
+    video_url: "N/A"
+    poster_url: "https://llvm.org/devmtg/2024-10/"
+    description: |
+      LLVM-libc’s headers just got a major upgrade! We ditched the old, complex Tablegen
+      system for a sleek new YAML-based generator. This means easier cross-compiling, faster
+      builds, and a smoother path to use LLVM-libc. Come and see how we transformed header
+      creation and why it’s a game-changer.
+
+
+  - title: "xdsl-gui: A Playground for the Compiler Optimization Game"
+    speaker: "Dalia Shaaban"
+    video_url: "N/A"
+    poster_url: "https://llvm.org/devmtg/2024-10/"
+    description: |
+      Optimizing compilers built on MLIR use customizable pipelines of passes and
+      transformations to implement various optimization strategies. While MLIR provides tools
+      like mlir-opt for controlling compilation flows, the complexity of selecting and
+      sequencing passes can be overwhelming due to the large number of available passes and the
+      manual, time-intensive experimentation required. This talk introduces xdsl-gui, an
+      interactive environment that enhances control and transparency during the compilation
+      process. Users input source code or IR, select and apply passes, and display the updated
+      IR. xdsl-gui also filters relevant passes and offers real-time feedback on pass selection,
+      helping developers optimize strategies effectively.
+
+  - title: "Autostack: a novel approach to implementing shared stack for image size savings"
+    speaker: "Sundeep Kushwaha"
+    video_url: "N/A"
+    poster_url: "N/A"
+    description: |
+      We propose a new technique called Autostack to share stack memory across multiple
+      software threads which results in significant image size savings. Additionally, Autostack
+      can also be used to improve performance by transitioning the stack from slower memory to
+      faster memory.
+
+  - title: "MLIR Interfaces for Generic High-Level Program Representations"
+    speaker: "Henrich Lauko"
+    video_url: "N/A"
+    poster_url: "N/A"
+    description: |
+      Discover how the VAST MLIR-based compiler for C/C++ extends MLIR's capabilities
+      beyond low-level IRs to support high-level features like custom symbols and AST-like
+      operations. This poster unveils advanced symbol tables that enable shadowing, diverse
+      symbol types, and customizable lookups. Learn about our MLIR interfaces that integrate
+      seamlessly with the Clang ecosystem, allowing tools such as AST queries and the Clang
+      Static Analyzer to operate on MLIR. We will demonstrate how MLIR can replicate Clang AST
+      behavior and represent Clang CFG primitives, enabling interoperability and analysis using
+      Clang's high-level tools.

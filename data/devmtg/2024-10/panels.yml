@@ -1,0 +1,20 @@
+panels: 
+  - title: "Is MLIR feature complete? Production ready?"
+    speaker: "Alex Zinenko, Stella Laurenzo, Renato Golin, Tobias Grosser, Mehdi Amini, Chris Lattner"
+    video_url: "https://youtu.be/T5H1HjOSE_I"
+    slides_url: "N/A"
+    description: |
+      Once the most fast-paced part of the LLVM source tree, the MLIR project is slowing
+      down significantly both in the amount and complexity of changes committed. The project had
+      a few open meetings since the start of this year as opposed to more than a dozen the year
+      before, 1183 commits tagged with "[mlir]" were made to the tree in the first seven months
+      of 2024 as opposed to 2045 during the same period of 2023, etc. At the same time, the
+      increasing amount of work is focused on downstream projects using MLIR, ranging from in-
+      tree CIR and Flang, to incubated CIRCT and Polygeist, to out-of-tree OSS projects like
+      IREE and XLA, to the many proprietary stacks. Are these the signs of MLIR reaching a
+      certain maturity level? Or are these the warning signs of the worrying community
+      disengagement? Should we declare MLIR feature-complete and redirect larger changes to
+      client projects or, on the contrary, actively lift the common parts from downstreams? What
+      is preventing individuals and teams from collaborating more actively in the open? This
+      panel brings together leaders from academia, start-ups and established industry players to
+      discuss their takes on these and other hot questions about MLIR strategy.

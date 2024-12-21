@@ -1,0 +1,56 @@
+tutorials:
+  - title: "Using MLIR from C and Python"
+    speaker: "Alex Zinenko"
+    video_url: "https://youtu.be/E2xLXcrkOTE"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/tutorial/Zinenko-UsingMLIR-from-C-and-Python.pdf"
+    description: |
+      MLIR, like the rest of LLVM, is primarily written in C++. However, the C++ API is
+      known to be complex and unstable. Moreover, both quick prototyping and deep integration
+      with client frameworks calls for uses of different languages to work with MLIR, most often
+      Python for its simplicity and C for its ubiquity. This talk will present the MLIR C API
+      and demonstrate how it is used to construct Python bindings. Attendees of this talk will
+      learn how to expose custom dialects in both C and Python as well as how to leverage C API
+      to interact with MLIR from different languages. 
+
+  - title: "LLVM Supply Chain Security: From developer’s desk to user’s device."
+    speaker: "Tom Stellard"
+    video_url: "https://youtu.be/eBHgcsz-HPg"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/tutorial/Stellard-SupplyChainSecurity.pdf"
+    description: |
+      Compilers are often the last line of defense in securing against dangerous exploits.
+      Compiler features like "Stack Protector", "Safe Stack", and "Stack Clash Protection" can
+      help protect code from common programmer mistakes and thwart malicious actors trying to
+      take advantage of buggy code. However, even the most sophisticated protection can be
+      rendered useless if the compiler itself can’t be delivered safely to its users. In this
+      talk we take a look at LLVM’s approach to supply chain security. How we get code from a
+      developer’s desk safely into the hands of users. We’ll look at our release process,
+      our access policies, and our project infrastructure to see how we are approaching supply
+      chain security and what we can do to make it better.
+
+  - title: "A Beginners’ Guide to SelectionDAG"
+    speaker: "Alex MacLean, Justin Fargnoli"
+    video_url: "https://youtu.be/nNQ6AF6i5FI"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/tutorial/MacLean-Fargnoli-ABeginnersGuide-to-SelectionDAG.pdf"
+    description: |
+      SelectionDAG is a crucial framework within LLVM for lowering LLVM IR into efficient
+      machine code. However, little beginner-friendly documentation exists for it. This talk
+      fills that void by covering the framework's architecture, target-specific optimizations,
+      and integration with LLVM IR and Machine IR. By the end of the session, participants will
+      be well-prepared to make their first contributions to backends using the SelectionDAG
+      framework.
+
+  - title: "Support a new Calling Convention in LLVM"
+    speaker: "Brandon Wu"
+    video_url: "https://youtu.be/6ZaiFA8eyHk"
+    slides_url: "https://llvm.org/devmtg/2024-10/slides/tutorial/Wu-Support-a-NewCallingConvention.pdf"
+    description: |
+      Vector processors play a big role among high performance computing applications such
+      as image processing, machine learning as well as gaming, thus handling vector registers
+      efficiently is important in terms of performance. Calling Convention(CC) is one of the
+      most significant aspects that can affect the execution speed and spills can be avoided if
+      vector registers between procedural calls are controlled and assigned efficiently. In this
+      talk, we will show the design and implementation of RISC-V Vector Calling Convention for
+      C/C++.
+
+
+
